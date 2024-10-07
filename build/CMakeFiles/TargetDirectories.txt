@@ -1,0 +1,3 @@
+/home/dogukan/Develop/game/snake_game/build/CMakeFiles/snake_game.dir
+/home/dogukan/Develop/game/snake_game/build/CMakeFiles/edit_cache.dir
+/home/dogukan/Develop/game/snake_game/build/CMakeFiles/rebuild_cache.dir
