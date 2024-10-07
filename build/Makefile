@@ -153,6 +153,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/main.c.s
 .PHONY : main.c.s
 
+src/food.o: src/food.c.o
+.PHONY : src/food.o
+
+# target to build an object file
+src/food.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/src/food.c.o
+.PHONY : src/food.c.o
+
+src/food.i: src/food.c.i
+.PHONY : src/food.i
+
+# target to preprocess a source file
+src/food.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/src/food.c.i
+.PHONY : src/food.c.i
+
+src/food.s: src/food.c.s
+.PHONY : src/food.s
+
+# target to generate assembly for a file
+src/food.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/src/food.c.s
+.PHONY : src/food.c.s
+
 src/game.o: src/game.c.o
 .PHONY : src/game.o
 
@@ -237,6 +261,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/food.o"
+	@echo "... src/food.i"
+	@echo "... src/food.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"

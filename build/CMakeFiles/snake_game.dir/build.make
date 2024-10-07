@@ -83,10 +83,24 @@ CMakeFiles/snake_game.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/snake_game.dir/main.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dogukan/Develop/game/snake_game/main.c -o CMakeFiles/snake_game.dir/main.c.s
 
+CMakeFiles/snake_game.dir/src/food.c.o: CMakeFiles/snake_game.dir/flags.make
+CMakeFiles/snake_game.dir/src/food.c.o: /home/dogukan/Develop/game/snake_game/src/food.c
+CMakeFiles/snake_game.dir/src/food.c.o: CMakeFiles/snake_game.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/snake_game.dir/src/food.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/food.c.o -MF CMakeFiles/snake_game.dir/src/food.c.o.d -o CMakeFiles/snake_game.dir/src/food.c.o -c /home/dogukan/Develop/game/snake_game/src/food.c
+
+CMakeFiles/snake_game.dir/src/food.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/snake_game.dir/src/food.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/dogukan/Develop/game/snake_game/src/food.c > CMakeFiles/snake_game.dir/src/food.c.i
+
+CMakeFiles/snake_game.dir/src/food.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/snake_game.dir/src/food.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/dogukan/Develop/game/snake_game/src/food.c -o CMakeFiles/snake_game.dir/src/food.c.s
+
 CMakeFiles/snake_game.dir/src/snake.c.o: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/snake.c.o: /home/dogukan/Develop/game/snake_game/src/snake.c
 CMakeFiles/snake_game.dir/src/snake.c.o: CMakeFiles/snake_game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/snake_game.dir/src/snake.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/snake_game.dir/src/snake.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/snake.c.o -MF CMakeFiles/snake_game.dir/src/snake.c.o.d -o CMakeFiles/snake_game.dir/src/snake.c.o -c /home/dogukan/Develop/game/snake_game/src/snake.c
 
 CMakeFiles/snake_game.dir/src/snake.c.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/snake_game.dir/src/snake.c.s: cmake_force
 CMakeFiles/snake_game.dir/src/game.c.o: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/game.c.o: /home/dogukan/Develop/game/snake_game/src/game.c
 CMakeFiles/snake_game.dir/src/game.c.o: CMakeFiles/snake_game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/snake_game.dir/src/game.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/snake_game.dir/src/game.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/game.c.o -MF CMakeFiles/snake_game.dir/src/game.c.o.d -o CMakeFiles/snake_game.dir/src/game.c.o -c /home/dogukan/Develop/game/snake_game/src/game.c
 
 CMakeFiles/snake_game.dir/src/game.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/snake_game.dir/src/game.c.s: cmake_force
 CMakeFiles/snake_game.dir/src/window.c.o: CMakeFiles/snake_game.dir/flags.make
 CMakeFiles/snake_game.dir/src/window.c.o: /home/dogukan/Develop/game/snake_game/src/window.c
 CMakeFiles/snake_game.dir/src/window.c.o: CMakeFiles/snake_game.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/snake_game.dir/src/window.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/snake_game.dir/src/window.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/snake_game.dir/src/window.c.o -MF CMakeFiles/snake_game.dir/src/window.c.o.d -o CMakeFiles/snake_game.dir/src/window.c.o -c /home/dogukan/Develop/game/snake_game/src/window.c
 
 CMakeFiles/snake_game.dir/src/window.c.i: cmake_force
@@ -128,6 +142,7 @@ CMakeFiles/snake_game.dir/src/window.c.s: cmake_force
 # Object files for target snake_game
 snake_game_OBJECTS = \
 "CMakeFiles/snake_game.dir/main.c.o" \
+"CMakeFiles/snake_game.dir/src/food.c.o" \
 "CMakeFiles/snake_game.dir/src/snake.c.o" \
 "CMakeFiles/snake_game.dir/src/game.c.o" \
 "CMakeFiles/snake_game.dir/src/window.c.o"
@@ -136,13 +151,14 @@ snake_game_OBJECTS = \
 snake_game_EXTERNAL_OBJECTS =
 
 snake_game: CMakeFiles/snake_game.dir/main.c.o
+snake_game: CMakeFiles/snake_game.dir/src/food.c.o
 snake_game: CMakeFiles/snake_game.dir/src/snake.c.o
 snake_game: CMakeFiles/snake_game.dir/src/game.c.o
 snake_game: CMakeFiles/snake_game.dir/src/window.c.o
 snake_game: CMakeFiles/snake_game.dir/build.make
 snake_game: /usr/lib/x86_64-linux-gnu/libSDL2.so
 snake_game: CMakeFiles/snake_game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable snake_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable snake_game"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/snake_game.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

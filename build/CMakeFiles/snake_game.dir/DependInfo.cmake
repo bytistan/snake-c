@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/dogukan/Develop/game/snake_game/main.c" "CMakeFiles/snake_game.dir/main.c.o" "gcc" "CMakeFiles/snake_game.dir/main.c.o.d"
+  "/home/dogukan/Develop/game/snake_game/src/food.c" "CMakeFiles/snake_game.dir/src/food.c.o" "gcc" "CMakeFiles/snake_game.dir/src/food.c.o.d"
   "/home/dogukan/Develop/game/snake_game/src/game.c" "CMakeFiles/snake_game.dir/src/game.c.o" "gcc" "CMakeFiles/snake_game.dir/src/game.c.o.d"
   "/home/dogukan/Develop/game/snake_game/src/snake.c" "CMakeFiles/snake_game.dir/src/snake.c.o" "gcc" "CMakeFiles/snake_game.dir/src/snake.c.o.d"
   "/home/dogukan/Develop/game/snake_game/src/window.c" "CMakeFiles/snake_game.dir/src/window.c.o" "gcc" "CMakeFiles/snake_game.dir/src/window.c.o.d"

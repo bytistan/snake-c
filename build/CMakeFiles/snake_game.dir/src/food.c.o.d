@@ -1,7 +1,7 @@
-CMakeFiles/snake_game.dir/src/snake.c.o: \
- /home/dogukan/Develop/game/snake_game/src/snake.c \
+CMakeFiles/snake_game.dir/src/food.c.o: \
+ /home/dogukan/Develop/game/snake_game/src/food.c \
  /usr/include/stdc-predef.h \
- /home/dogukan/Develop/game/snake_game/include/snake.h \
+ /home/dogukan/Develop/game/snake_game/include/food.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -188,6 +188,10 @@ CMakeFiles/snake_game.dir/src/snake.c.o: \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/dogukan/Develop/game/snake_game/include/color.h
+ /usr/include/SDL2/SDL_misc.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+ /home/dogukan/Develop/game/snake_game/include/color.h \
+ /home/dogukan/Develop/game/snake_game/include/snake.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h

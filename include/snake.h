@@ -3,6 +3,7 @@
    
 #include <SDL2/SDL.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "color.h"
 
@@ -15,9 +16,7 @@ typedef struct {
     int x;
     int y;
     
-    int width;
-    int height;
-    
+    int size;
     int speed;    
 
     Direction direction;    
@@ -28,5 +27,7 @@ typedef struct {
 void drawSnake(SDL_Renderer* renderer, Snake snake);
 
 void applySpeed(Snake* snake); 
+
+bool moveSnake(SDL_Event event, Snake* snake);
 
 #endif

@@ -3,15 +3,20 @@
 
 #include <SDL2/SDL.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "window.h"
 #include "snake.h"
+#include "food.h"
+
+#define WIDTH 400
+#define HEIGHT 400
 
 int initializeSDL();
 
 void shutdownSDL();
-void loop(SDL_Renderer* renderer, SDL_Event event, Snake* snake);
+void loop(SDL_Renderer* renderer, SDL_Event event, Snake* snake, Food* food);
 
-void input(SDL_Event evetn, Snake* snake);
+void teleportation(Snake* snake);
 
 #endif

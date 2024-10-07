@@ -1,5 +1,6 @@
 #include "game.h"
 #include "snake.h"
+#include "food.h"
 
 int initializeSDL() {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
@@ -8,14 +9,16 @@ int initializeSDL() {
     }
     return 0;
 }
-
 void shutdownSDL() {
     SDL_Quit();
 }
 
-void loop(SDL_Renderer* renderer, SDL_Event event, Snake* snake) {
+void loop(SDL_Renderer* renderer, SDL_Event event, Snake* snake, Food* food) {
     
     int running = 1;    
+
+    bool keyPressed = false;
+    SDL_Event savedEvent;
 
     while (running) {
         // Nearly 60 fps 
@@ -23,46 +26,48 @@ void loop(SDL_Renderer* renderer, SDL_Event event, Snake* snake) {
 
         // Add speed to snake
         applySpeed(snake);    
-    
+
+        // Check snake eat the food ?
+        eatFood(food,*snake); 
+        
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
                running = 0;
             } 
             
+            // Check key down 
             if (event.type == SDL_KEYDOWN) {
-                input(event, snake);
+                keyPressed = true;
+                savedEvent = event;
             } 
         } 
-                    
+        
+        // Movement controller
+        if (keyPressed) {
+            keyPressed = moveSnake(savedEvent, snake);
+        }
+
         // Fill screen to black
         SDL_SetRenderDrawColor(renderer, 33, 37, 41, 255);
         SDL_RenderClear(renderer);
         
-        // Draw snake
+        // Draw sprite 
         drawSnake(renderer, *snake);
+        drawFood(renderer, *food);
 
         // Update screen
         SDL_RenderPresent(renderer);
     }
 }
 
-void input(SDL_Event event, Snake* snake) {
-    switch (event.key.keysym.sym) {
-        case SDLK_UP:    
-            snake->direction.x = 0;
-            snake->direction.y = -1;
-            break;
-        case SDLK_DOWN: 
-            snake->direction.x = 0;
-            snake->direction.y = 1;
-            break;
-        case SDLK_LEFT:  
-            snake->direction.x = -1;
-            snake->direction.y = 0;
-            break;
-        case SDLK_RIGHT:
-            snake->direction.x = 1;
-            snake->direction.y = 0;
-            break;
-    }
+void teleportation(Snake* snake) {
+   if (snake->x > WIDTH) {
+       snake->x = 0;
+   } else if(snake->x < 0) {
+       snake->x = WIDTH;
+   } else if (snake->y > HEIGHT) {
+       snake->y = 0; 
+   } else if (snake->y < 0) {
+       snake-> y = HEIGHT;
+   }
 }

@@ -81,12 +81,12 @@ clean: CMakeFiles/snake_game.dir/clean
 CMakeFiles/snake_game.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/snake_game.dir/build.make CMakeFiles/snake_game.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target snake_game"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/dogukan/Develop/game/snake_game/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target snake_game"
 .PHONY : CMakeFiles/snake_game.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/snake_game.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dogukan/Develop/game/snake_game/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dogukan/Develop/game/snake_game/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/snake_game.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dogukan/Develop/game/snake_game/build/CMakeFiles 0
 .PHONY : CMakeFiles/snake_game.dir/rule

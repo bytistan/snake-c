@@ -192,6 +192,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
 
+//The directory containing a CMake configuration file for SDL2_mixer.
+SDL2_mixer_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2_mixer
+
 //Value Computed by CMake
 snake_game_BINARY_DIR:STATIC=/home/dogukan/Develop/game/snake_game/build
 
