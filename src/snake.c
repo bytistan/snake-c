@@ -12,3 +12,8 @@ void drawSnake(SDL_Renderer* renderer, Snake snake) {
 
     SDL_RenderPresent(renderer);
 }
+
+void applySpeed(Snake* snake) {
+    snake->x += snake->direction.x * snake->speed; 
+    snake->y += snake->direction.y * snake->speed;
+}

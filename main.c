@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
         return -1;
     }
     
-    Snake snake = {100,100,20,20,{32, 201, 151, 255}};
+    Snake snake = {100, 100, 20, 20, 4, {0,0}, {32, 201, 151, 255}};
 
     SDL_Event event;
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    loop(renderer, event, snake); 
+    loop(renderer, event, &snake); 
 
     destroyWindow(window);
     return 0;
