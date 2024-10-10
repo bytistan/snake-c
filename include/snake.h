@@ -37,10 +37,12 @@ void drawTail(SDL_Renderer* renderer, Snake snake, int score);
 
 bool appendTail(int score, Snake* snake);
 
-void updateTail(int score, Snake* snake);
+bool updateTail(int score, Snake* snake);
 
 void applySpeed(Snake* snake); 
 
 bool moveSnake(SDL_Event event, Snake* snake);
+
+bool biteTail(Snake snake);
 
 #endif

@@ -18,25 +18,26 @@ int main(int argc, char* argv[]) {
     }
     
     Food food = {
-        .x = 200, 
-        .y = 200, 
-        .size = 20, 
+        .x = 180, 
+        .y = 180, 
+        .size = 30, 
         .score = 1, 
         .color = {240, 62, 62, 255},
         .flag = false
     };    
 
     Snake snake = {
-        .x = 100, 
-        .y = 100, 
-        .size = 20, 
-        .speed = 4, 
-        .direction = {0,0}, 
+        .x = 90, 
+        .y = 90, 
+        .size = 30, 
+        .speed = 5, 
+        .direction = {1,0}, 
         .color = {32, 201, 151, 255}
     };
 
     SDL_Event event;
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
     if (renderer == NULL) {
         printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
         SDL_DestroyWindow(window);
@@ -44,7 +45,29 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    loop(renderer, event, &snake, &food); 
+    int running = 1;    
+
+    bool keyPressed = false;
+    SDL_Event savedEvent;
+
+    while (running) {
+        // Nearly 60 fps 
+        SDL_Delay(16);
+        
+        // Game loop
+        loop(
+            renderer, 
+            &event, 
+            &savedEvent,
+            &snake, 
+            &food,
+            &keyPressed,
+            &running
+        ); 
+
+        // Update screen
+        SDL_RenderPresent(renderer);
+    }
 
     destroyWindow(window);
     return 0;

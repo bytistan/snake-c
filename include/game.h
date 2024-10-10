@@ -9,13 +9,22 @@
 #include "food.h"
 #include "snake.h"
 
-#define WIDTH 400
-#define HEIGHT 400
+#define WIDTH 600
+#define HEIGHT 600
 
 int initializeSDL();
 
 void shutdownSDL();
-void loop(SDL_Renderer* renderer, SDL_Event event, Snake* snake, Food* food);
+
+void loop(
+    SDL_Renderer* renderer, 
+    SDL_Event* event, 
+    SDL_Event* savedEvent, 
+    Snake* snake, 
+    Food* food,
+    bool* keyPressed,
+    int* running
+);
 
 void teleportation(Snake* snake);
 

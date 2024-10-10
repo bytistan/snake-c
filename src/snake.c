@@ -8,10 +8,10 @@ void drawSnake(SDL_Renderer* renderer, Snake snake) {
                           snake.color.a);
 
     SDL_Rect rect = {
-        snake.x + 1,
-        snake.y + 1,
-        snake.size - 2,
-        snake.size - 2
+        snake.x + 2,
+        snake.y + 2,
+        snake.size - 4,
+        snake.size - 4 
     };
 
     SDL_RenderFillRect(renderer, &rect);
@@ -26,10 +26,10 @@ void drawTail(SDL_Renderer* renderer, Snake snake, int score) {
                               snake.color.a);
         
         SDL_Rect rect = {
-            snake.tail[i].x + 1,
-            snake.tail[i].y + 1,
-            snake.size - 2,
-            snake.size - 2
+            snake.tail[i].x + 2,
+            snake.tail[i].y + 2,
+            snake.size - 4,
+            snake.size - 4
         };
 
         SDL_RenderFillRect(renderer, &rect);
@@ -47,7 +47,9 @@ bool appendTail(int score, Snake* snake) {
     return false;
 }
 
-void updateTail(int score, Snake* snake) {
+bool updateTail(int score, Snake* snake) {
+    int count = 0;
+
     if (snake->x % snake->size == 0 && snake->y % snake->size == 0) {
         for (int i = 1; i < score + 2; i++) {
             if (i == score + 1) {
@@ -56,8 +58,18 @@ void updateTail(int score, Snake* snake) {
             } else {
                 snake->tail[i - 1] = snake->tail[i];
             }
-        }
-    } 
+
+            if (i != score + 1) {
+                if (snake->x == snake->tail[i - 1].x && snake->y == snake->tail[i - 1].y) {
+                    count ++; 
+                } 
+            }
+        } 
+    }
+   
+    bool flag = true ? count > 0 : false; 
+
+    return flag;
 }
 
 void applySpeed(Snake* snake) {
@@ -69,20 +81,28 @@ bool moveSnake(SDL_Event event, Snake* snake) {
     if (snake->x % snake->size == 0 && snake->y % snake->size == 0) {
         switch (event.key.keysym.sym) {
             case SDLK_UP:    
-                snake->direction.x = 0;
-                snake->direction.y = -1;
+                if (snake->direction.x != 0) {
+                    snake->direction.x = 0;
+                    snake->direction.y = -1;
+                }
                 break;
             case SDLK_DOWN: 
-                snake->direction.x = 0;
-                snake->direction.y = 1;
+                if (snake->direction.x != 0) {
+                    snake->direction.x = 0;
+                    snake->direction.y = 1;
+                }
                 break;
             case SDLK_LEFT:  
-                snake->direction.x = -1;
-                snake->direction.y = 0;
+                if (snake->direction.y != 0) {
+                    snake->direction.x = -1;
+                    snake->direction.y = 0;
+                }
                 break;
             case SDLK_RIGHT:
-                snake->direction.x = 1;
-                snake->direction.y = 0;
+                if (snake->direction.y != 0) {
+                    snake->direction.x = 1;
+                    snake->direction.y = 0;
+                }
                 break;
         }
 
