@@ -6,8 +6,8 @@
 #include <stdbool.h>
 
 #include "window.h"
-#include "snake.h"
 #include "food.h"
+#include "snake.h"
 
 #define WIDTH 400
 #define HEIGHT 400

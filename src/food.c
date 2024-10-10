@@ -15,10 +15,13 @@ void eatFood(Food* food, Snake snake) {
     if (food->x == snake.x && food->y == snake.y) {
         srand(time(NULL));
 
-        int x = (rand() % 21) * 20; 
-        int y = (rand() % 21) * 20;
+        int x = (rand() % 20) * 20; 
+        int y = (rand() % 20) * 20;
 
         food->x = x;
         food->y = y;
+
+        food->score += 1;
+        food->flag = true;
     }
 }

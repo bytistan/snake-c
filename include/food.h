@@ -13,8 +13,11 @@ typedef struct {
     int y;
     
     int size;
+    int score;
     
     Color color;
+
+    bool flag;
 } Food;
 
 void drawFood(SDL_Renderer* renderer, Food food);

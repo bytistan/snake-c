@@ -1,6 +1,4 @@
 #include "game.h"
-#include "snake.h"
-#include "food.h"
 
 int initializeSDL() {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
@@ -9,6 +7,7 @@ int initializeSDL() {
     }
     return 0;
 }
+
 void shutdownSDL() {
     SDL_Quit();
 }
@@ -28,7 +27,20 @@ void loop(SDL_Renderer* renderer, SDL_Event event, Snake* snake, Food* food) {
         applySpeed(snake);    
 
         // Check snake eat the food ?
-        eatFood(food,*snake); 
+        if (!food->flag) {
+            eatFood(food,*snake); 
+        }
+        
+        // If snake eat food, add tail ++ 
+        if (food->flag) {
+            food->flag = appendTail(food->score,snake);
+        }
+
+        // Update tail positions
+        updateTail(food->score, snake); 
+
+        // Teleport
+        teleportation(snake);
         
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_QUIT) {
@@ -53,6 +65,7 @@ void loop(SDL_Renderer* renderer, SDL_Event event, Snake* snake, Food* food) {
         
         // Draw sprite 
         drawSnake(renderer, *snake);
+        drawTail(renderer, *snake, food->score);
         drawFood(renderer, *food);
 
         // Update screen

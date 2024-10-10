@@ -1,10 +1,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_audio.h>
 
-#include "window.h"
 #include "game.h"
-#include "snake.h" 
-#include "food.h"
 
 int main(int argc, char* argv[]) {
     // Start SDL 
@@ -20,8 +17,23 @@ int main(int argc, char* argv[]) {
         return -1;
     }
     
-    Food food = {200, 200, 20, {240, 62, 62, 255}};    
-    Snake snake = {100, 100, 20, 4, {0,0}, {32, 201, 151, 255}};
+    Food food = {
+        .x = 200, 
+        .y = 200, 
+        .size = 20, 
+        .score = 1, 
+        .color = {240, 62, 62, 255},
+        .flag = false
+    };    
+
+    Snake snake = {
+        .x = 100, 
+        .y = 100, 
+        .size = 20, 
+        .speed = 4, 
+        .direction = {0,0}, 
+        .color = {32, 201, 151, 255}
+    };
 
     SDL_Event event;
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
